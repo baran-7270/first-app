@@ -1,0 +1,45 @@
+
+<section>
+  <div class="form-box">
+    <div class="form-value">
+      <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+        <h2>Login</h2>
+    
+  <div  class="inputbox" >
+    <input formControlName="username" type="text" required>
+    <!-- <span class="icon"><i class="fa fa-user"></i></span> -->
+    <label for="">username</label>
+  </div>
+
+  <div  class="inputbox" >
+    <input formControlName="password"  type="password"  maxlength="6"  required>
+    <!-- <span class="icon"><i class="fa fa-lock"></i></span> -->
+    <label for="">password</label>
+  </div>
+   
+
+    <div class="forget">
+      <label for=""><input formControlName="rememberme" type="checkbox">Remember Me</label>
+     </div>      
+        <button type="submit" [ngClass]="{ 'active-button': Form.valid }" [disabled]="!Form.valid">log in</button>
+        <div class="register">
+        <a  href="./auth/register">Create Account</a>
+      </div>
+      
+      </form>
+    </div>
+  </div>
+ 
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
